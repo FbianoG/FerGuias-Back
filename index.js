@@ -15,8 +15,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(router)
 
+DataBase.connectDataBase()
 
 app.listen(port, () => {
     console.log(`Servidor funcionando na porta:`, port)
-    DataBase.connectDataBase()
 })
