@@ -6,7 +6,17 @@ const cors = require('cors')
 const app = express()
 const port = 3000
 
-app.use(cors())
+
+
+
+const corsOptions = {
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}
+
+app.use(cors(corsOptions));
+
+
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
