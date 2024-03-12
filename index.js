@@ -7,14 +7,7 @@ const app = express()
 const port = 3000
 
 
-
-
-const corsOptions = {
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
-}
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 app.use(express.static('public'))
